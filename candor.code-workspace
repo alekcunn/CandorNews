@@ -1,0 +1,69 @@
+{
+    "folders": [
+		{
+			"path": ".",
+
+			
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"rust-lang.rust",
+			"gruntfuggly.todo-tree",
+
+		]
+	},
+
+	"launch":{
+
+		"version": "0.2.0",
+		"configurations": [
+			{
+
+				"name": "Launch Candor Node (debug)",
+				"type": "cppdbg",
+				"request": "launch",
+				"program": "./target/debug/candor-node",
+				"args": [
+					//place args here if any desired
+				],
+				"stopAtEntry": false,
+				"cwd": "${fileDirname}",
+				"environment": [],
+				"externalConsole": false,
+				"MIMode": "lldb",
+				"setupCommands": [
+					{
+						"description": "Enable pretty-printing for gdb",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				]
+			}
+		]
+		
+	},
+
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"type": "shell",
+				"command": "cargo",
+				"args": [
+					"build",
+					"-p",
+					"candor-node",
+				],
+				"group": "build",
+				"presentation": {
+					"reveal": "always",
+					"panel": "new"
+				},
+				"label": "build Candor Node"
+
+			}
+		]
+	}
+}
+

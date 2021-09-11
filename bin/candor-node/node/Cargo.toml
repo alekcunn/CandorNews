@@ -1,20 +1,20 @@
 [package]
-name = "node-template"
+name = "candor-node"
 version = "3.0.0"
-authors = ["Substrate DevHub <https://github.com/substrate-developer-hub>"]
-description = "A fresh FRAME-based Substrate node, ready for hacking."
+authors = ["Candor Community"]
+description = "Substrate node, used in the candor network to store and share votes and other transactions."
 edition = "2018"
 license = "Unlicense"
 build = "build.rs"
-homepage = "https://substrate.dev"
-repository = "https://github.com/substrate-developer-hub/substrate-node-template/"
+homepage = "TBD"
+repository = "https://github.com/alekcunn/CandorNews"
 publish = false
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
 
 [[bin]]
-name = "node-template"
+name = "candor-node"
 
 [dependencies]
 structopt = "0.3.8"
@@ -54,7 +54,7 @@ pallet-transaction-payment-rpc = { version = "4.0.0-dev", path = "../../../frame
 frame-benchmarking = { version = "4.0.0-dev", path = "../../../frame/benchmarking" }
 frame-benchmarking-cli = { version = "4.0.0-dev", path = "../../../utils/frame/benchmarking-cli" }
 
-node-template-runtime = { version = "3.0.0", path = "../runtime" }
+candor-node-runtime = { version = "3.0.0", path = "../runtime" }
 
 [build-dependencies]
 substrate-build-script-utils = { version = "3.0.0", path = "../../../utils/build-script-utils" }
@@ -62,5 +62,5 @@ substrate-build-script-utils = { version = "3.0.0", path = "../../../utils/build
 [features]
 default = []
 runtime-benchmarks = [
-	"node-template-runtime/runtime-benchmarks",
+	"candor-node-runtime/runtime-benchmarks",
 ]

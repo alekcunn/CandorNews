@@ -2,10 +2,10 @@
 resolver = "2"
 
 members = [
-	"bin/node-template/node",
-	"bin/node-template/pallets/template",
-	"bin/node-template/pallets/vote",
-	"bin/node-template/runtime",
+	"bin/candor-node/node",
+	"bin/candor-node/pallets/template",
+	"bin/candor-node/pallets/vote",
+	"bin/candor-node/runtime",
 	"bin/node/bench",
 	"bin/node/cli",
 	"bin/node/test-runner-example",
